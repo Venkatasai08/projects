@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/projects.css"></link>
+    <title>projects</title>
+    <style>
+    body{
+            background: url(https://i.pinimg.com/originals/82/a5/73/82a5739151bbad67d8cc054e811ba932.gif) rgba(248, 248, 248, 0.5) repeat center ;
+            background-size: auto;
+            background-blend-mode: screen;
+        }
+
+        @media screen and (max-width: 780px) {
+    body{
+        background-size:100%;
+    }
+}
+        
+    </style>
+</head>
+<body>
+    <div class="contact">
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+      <div class="overlay-content">
+        
+        <a href="/profile">Profile</a>
+        <a href="/morepage">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/contacts">Contacts</a>
+        
+      </div>
+      
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()" class="burger"></span>
+        <div href="javascript:void(0)" class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+</span>
+
+<div id="parag" class="para">
+    <div>
+        <a class="closebt" onclick="closepara()">
+            <h2><b>close</b></h2>
+        </a>
+        <div id="paraA">
+            
+            <h2>To find my room </h2>
+            <p width="60%" height="60%">This is a wesite done to our college.<br>
+                This is a solution for a problem facing in our college especially
+            in our A block .<br> We know the destination room number but dont know thr route.<br>
+            Inorder to solve this problem we developed a website which will say the route.<br>
+            In this you need to give two attributes. <br>1st "from" address which is you need
+             to stand in front of any room and give that roomm number in from or select that.
+            <br> 2nd is "to" address which is destinatin room address,give or select desitnation 
+             room address in the "to" dropdown.<br>After completion of filling these attributes click
+              on "find route" button.
+              <br>Then to route will be on your screen
+         </p>
+        </div>
+        <div id="paraB">
+            
+            <h2>College Fest Registration </h2>
+            <p>This is website done bu us.This ies the solution for a problem facing in 
+                our college.The problem is if any fest occuring in our college we are not knowing 
+                it and if we know that some fest is occuring then also we are unable to register to it.
+                So to solve this problem we came up this idea.<br>
+                This is made up of HTML,CSS,JS,NodeJS and Mongodb .<br>
+                <br>
+                This website consists of 3 pages,<br>
+                1) College = choose the college <br>
+                2) Fest = choose the fest(to which fest you want to register)<br>
+                3) Registration form = give your details(All the data given here will be saved in data base)
+            </p>
+        </div>
+        <div id="paraC">
+            
+            <h2>My portfolio </h2>
+            <p>This is my portfolio website.
+                Which is responsive in any type of device.<br>
+                
+                This website is made of HTML,CSS,JS and Node JS<br>
+                MY portfolio contains  4 pages they are<br>
+                1) HOME = Here there will be a small introduction about me<br>
+                2) ABOUT ME = In this page there will be more about me like GOAL, SKILLS, EDUCATION, EXPERIENCE.<br>
+                3) PROJECTS = In this page all my projects will be present .<br>
+                4) CONTACT =  In this page to contact with me.<br>
+                 ( Data entered in hte contact page will get to me throught email)
+            </p>
+        </div>
+        <div id="paraD">
+          
+            <h2>Snake game </h2>
+            <p>This is a game developed by me.By doing this project i have learnt so much .<br>
+                $= I have done this project while learning JAVASCRIPT.<br>
+                $= This game id made up of HTML,CSS and JAVACSRIPT<br>
+                $= This game is played by arrow keys of keyboard so this game is not played on mobile and tabs<br>
+                $= If the head of  the snake touches the boundary the game is over.<br>
+                $= There are sound effects also for this game like gameover sound food eating sound starting sound.<br>
+
+            </p>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<section class="projects" >
+    <div class="prorow">
+        <div id="frowi" class="rowc">
+            <img src="images/secondpage.png" alt="" id="pi1" class="pc1">
+            <p class="parawei"> To Find My Room</p>
+            <button id="btA" class="btn"><p class="view1"><b>viewproject</b></p></button>
+        </div>
+        <div id="srowi" class="rowc">
+            <img src="images/main13.png" alt="" id="pi2" class="pc1">
+            <p class="parawei"> College Fest Registration</p>
+            <button id="btB" class="btn"><p class="view2"><b>viewproject</b></p></button> 
+        </div>
+    </div>
+    <div class="prorow">
+        <div id="trowi" class="rowc">
+            <img src="images/main10.png" alt="" id="pi3" class="pc1">
+            <p class="parawei"> My Portfolio</p>
+            <button id="btC" class="btn"><p class="view3"><b>viewproject</b></p></button> 
+        </div>
+        <div id="frowi" class="rowc">
+            <img src="images/snake2.png" alt="" id="pi4" class="pc1">
+            <p class="parawei"> Snake Game</p>
+            <button id="btD" class="btn"><p class="view4"><b>viewproject</b></p></button> 
+        </div>
+    </div>
+    
+   
+</section>
+</div>
+
+
+<script>
+    const menuBtn = document.querySelector('.menu-btn');
+    let myNav = document.getElementById("myNav");
+    let menuOpen = false;
+    let parag = document.querySelector(".para div");
+    let header = document.querySelector(".para div a h2");
+    let btA = document.getElementById("btA");
+    let btB = document.getElementById("btB");
+    let btC = document.getElementById("btC");
+    let btD = document.getElementById("btD");
+    let paraA = document.getElementById("paraA");
+    let paraB = document.getElementById("paraB");
+    let paraC = document.getElementById("paraC");
+    let paraD = document.getElementById("paraD");
+    let projects = document.querySelector(".projects");
+    let body=document.querySelector("body");
+    let view1=document.querySelector(".view1");
+    let view2=document.querySelector(".view2");
+    let view3=document.querySelector(".view3");
+    let view4=document.querySelector(".view4");
+    let button=document.querySelector("button");
+
+
+   
+    function appear()
+    {
+        
+        view1.style.display="none"
+        btA.style.width = "1px";
+        btA.style.border = "0.5px";
+
+        view2.style.display="none"
+        btB.style.width = "1px";
+        btB.style.border = "0.5px";
+
+        view3.style.display="none"
+        btC.style.width = "1px";
+        btC.style.border = "0.5px";
+
+        view4.style.display="none"
+        btD.style.width = "1px"; 
+        btD.style.border = "0.5px";
+    }
+    
+    
+
+    btA.addEventListener('click', () => {
+        
+        parag.style.width = "80%";
+        setTimeout (() => {
+        paraA.style.display="block";
+        paraA.style.width="90%";
+        paraA.style.filter="none";
+        },200);
+        header.style.display="block";
+        appear();
+
+
+        
+
+
+    });
+
+
+btB.addEventListener('click', () => {
+    parag.style.width = "80%";
+    setTimeout (() => {      
+    paraB.style.display = "block";
+    paraB.style.width="90%";
+    paraB.style.filter="none";
+    },200);
+    header.style.display="block";
+    appear();
+
+});
+
+
+btC.addEventListener('click', () => {
+    parag.style.width = "80%";
+    setTimeout (() => {
+    paraC.style.display = "block";
+    paraC.style.width="90%";
+    
+    },200);
+    header.style.display="block";
+    appear();
+   
+});
+
+
+btD.addEventListener('click', () => {
+    parag.style.width = "80%";
+    setTimeout (() => {
+    paraD.style.display = "block";
+    paraD.style.width="90%";
+    paraD.style.filter="none";
+    },200);
+    header.style.display="block";
+    appear();
+
+});
+
+
+    function openNav() {
+        myNav.style.height = "90%";
+       
+}
+
+function closeNav() {
+        myNav.style.height = "0%";
+       
+}
+    menuBtn.addEventListener('click', () => {
+        if(!menuOpen  ) {
+            menuBtn.classList.add('open');
+            menuOpen = true;
+            
+        }else {
+            menuBtn.classList.remove('open');
+            menuOpen = false;
+            
+            
+  }
+
+  if(menuOpen== true)
+    {
+        openNav();
+    }
+    else
+    {
+        closeNav();
+    }
+  
+});
+
+
+
+
+
+
+function disappear(){
+    body.style.filter="none";
+    setTimeout(() => {
+    view1.style.display="block";
+    }, 500);
+    btA.style.width = "45%";
+    btA.style.border = " 2px solid black";
+    
+    setTimeout(() => {
+    view2.style.display="block";
+    }, 500);
+    btB.style.width = "45%";
+    btB.style.border = " 2px solid black";
+    
+    setTimeout(() => {
+    view3.style.display="block";
+    }, 500);
+    btC.style.width = "45%";
+    btC.style.border = " 2px solid black";
+
+    setTimeout(() => {
+    view4.style.display="block"
+    }, 500);
+    btD.style.width = "45%";
+    btD.style.border = " 2px solid black";
+}
+
+
+
+
+
+
+
+function closepara(){
+        header.style.display="none";
+       
+        
+        if (paraB.style.display!="none")
+        {
+            parag.style.width= "0%";
+            paraB.style.display="none";
+            disappear();
+        }
+         if (paraA.style.display!="none")
+        {
+            parag.style.width= "0%";
+            paraA.style.display="none";
+
+           disappear();
+            
+        }
+        if (paraC.style.display!="none")
+        {
+            parag.style.width= "0%";
+            paraC.style.display="none";
+            disappear();
+           
+        }
+        if (paraD.style.display!="none")
+        {
+            parag.style.width= "0%";
+            paraD.style.display="none";
+            disappear();
+            
+        }
+    }
+
+
+</script>
+</body>
+</html>

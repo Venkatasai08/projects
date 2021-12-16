@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    </link>
+</head>
+<style>
+    #preloader {
+        background: black url(gif/preloader.gif) no-repeat center center;
+        height: 100%;
+        background-size: 20%;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+    }
+
+    body {
+        background: url(https://i.pinimg.com/originals/82/a5/73/82a5739151bbad67d8cc054e811ba932.gif) rgba(248, 248, 248, 0.5) repeat center;
+        background-size: auto;
+        background-blend-mode: screen;
+    }
+
+    @media screen and (max-width: 780px) {
+        body {
+            background-size: 100%;
+        }
+    }
+</style>
+
+<body onload="typeWriter()">
+   
+    <div id="preloader">
+
+    </div>
+
+    <div id="rgba">
+        <div class="contact">
+            <div id="main">
+            
+            
+            
+            </div>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+                <div class="overlay-content">
+
+                    <a href="/profile">Profile</a>
+                    <a href="/morepage">About</a>
+                    <a href="/projects">Projects</a>
+                    <a href="/contacts">contacts</a>
+                    
+
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="burger"></span>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
+            </span>
+
+            <section>
+
+
+                <div class="left">
+
+
+                    <div class="myimg">
+                        <img src="images/photo.jpeg" alt="Loading.." class="pic">
+
+                    </div>
+                </div>
+                <div class="right">
+
+                    <p class="text-sm text">Hii this is</p>
+                    <p class="text-bg text ">Vishwanath Venkatasai</p>
+                    <div>
+                        <p class="text-md text " id="a"> </p>
+                    </div>
+
+                    <div class="ship">
+
+                        <a href="/morepage"><button id="mam" class="btn glow-on-hover">
+                                <p>More about me</p>
+                            </button></a>
+                        <a href="https://www.linkedin.com/in/venkatasai-vishwanath-937600213" target="blank"><button id="projects" class="btn glow-on-hover">
+                                <p>LinkedIn</p>
+                            </button></a>
+                    </div>
+                </div>
+        </div>
+
+
+        </section>
+    </div>
+    <script>
+
+        let a = document.getElementById('a');
+        const menuBtn = document.querySelector('.menu-btn');
+        let myNav = document.getElementById("myNav");
+        let menuOpen = false;
+        const welcome = new Audio('images/welcome.mp3');
+        var i = 0;
+        var txt = " MY PORTFOLIO WEBSITE";
+        var speed = 100;
+
+        function typeWriter() {
+            if (i < txt.length) {
+
+                document.getElementById("main").innerHTML += txt.charAt(i);
+                i++;
+
+                setTimeout(typeWriter, speed);
+
+
+            }
+        }
+
+
+        function loop() {
+
+            setTimeout(() => {
+                a.innerHTML = "FULL STACK  DEVELOPER";
+                a.style.transition = "500ms";
+            }, 0000);
+            setTimeout(() => {
+                a.innerHTML = "";
+                a.style.transition = "500ms";
+            }, 500);
+            setTimeout(() => {
+                a.innerHTML = "TECH BLOGGER";
+                a.style.transition = "500ms";
+            }, 750);
+            setTimeout(() => {
+                a.innerHTML = "";
+                a.style.transition = "500ms";
+            }, 1250);
+            setTimeout(() => {
+                a.innerHTML = "FRONT END DEVELOPER";
+                a.style.transition = "500ms";
+            }, 1500);
+            setTimeout(() => {
+                a.innerHTML = "";
+                a.style.transition = "500ms";
+            }, 2000);
+            setTimeout(() => {
+                a.innerHTML = "BACK END  DEVELOPER";
+                a.style.transition = "500ms";
+            }, 2250);
+            setTimeout(() => {
+                a.innerHTML = "";
+                a.style.transition = "500ms";
+            }, 2750);
+            setTimeout(() => {
+                a.innerHTML = "CODER";
+                a.style.transition = "500ms";
+            }, 3000);
+            setTimeout(() => {
+                a.innerHTML = "";
+                a.style.transition = "500ms";
+            }, 3500);
+        }
+
+        loop();
+        setInterval(loop, 3750);
+
+
+        function openNav() {
+            myNav.style.height = "85%";
+
+        }
+
+        function closeNav() {
+            myNav.style.height = "0%";
+
+        }
+        menuBtn.addEventListener('click', () => {
+            if (!menuOpen) {
+                menuBtn.classList.add('open');
+                menuOpen = true;
+
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+
+
+            }
+
+            if (menuOpen == true) {
+                openNav();
+            }
+            else {
+                closeNav();
+            }
+
+        });
+
+
+
+
+    </script>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+
+        });
+    </script>
+
+
+</body>
+
+</html>

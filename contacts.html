@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="#">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/contacts.css">
+    </link>
+    <title>contact me</title>
+    <style>
+        body {
+            background: url(https://i.pinimg.com/originals/82/a5/73/82a5739151bbad67d8cc054e811ba932.gif) rgba(248, 248, 248, 0.5) repeat center;
+            background-size: auto;
+            background-blend-mode: screen;
+        }
+
+        @media screen and (max-width: 780px) {
+            body {
+                background-size: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact">
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+            <div class="overlay-content">
+
+                <a href="/profile">Profile</a>
+                <a href="/morepage">About</a>
+                <a href="/projects">Projects</a>
+                <a href="/contacts">contacts</a>
+
+
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="burger"></span>
+        <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
+        </span>
+        <h1 class="links"><b>CONTACT ME</b></h1>
+        <section class="details">
+
+            <div class="right">
+                <img src="images/photo.jpeg" alt="Loading..">
+                <br>
+                <br>
+                <div class="mails">
+                    <p class="emails links">EMAILS</p>
+                    <p class="email links">vishwanathvenkatasai08@gmail.com</p>
+                    <p class="email links">venkatasaivishwanath123@gmail.com</p>
+                </div>
+
+                <br>
+                <br>
+                <p class="links">LINKS</p>
+                <div class="linksc" id="linksid">
+
+                    <a href="https://www.facebook.com/venkatasai.venkatasai.376" target="blank">
+                        <img id="facebook" src="images/facebook.png" alt="loading.." class="and">
+                    </a>
+                    <a href="https://instagram.com/venkatasaivishwanath?utm_medium=copy_link" target="blank">
+                        <img id="insta" src="images/insta.jpeg" alt="loading.." class="and">
+                    </a>
+                    <a href="https://youtube.com/channel/UCVeArSMxszIwswlqF_rHybQ" target="blank">
+                        <img id="youtube" src="images/youtube.png" alt="loading.." class="and">
+                    </a>
+
+
+                </div>
+                <!-- <div class="transp">
+                    <div>
+
+                    </div>
+                </div> -->
+            </div>
+            <div class="left">
+                <form id="contact-form" action="/contactUs" method="POST" name="contactForm" autocomplete="off">
+                    <div class="input">
+                        <label for="name"><b>Name:</b>
+                            <input type="text" name="naame" id="naame" class="naame" required placeholder="Name">
+                        </label>
+                    </div>
+                    <div class="input">
+                        <label for="email"><b>Email:</b>
+                            <input type="email" name="email" id="email" class="email" required placeholder="Email">
+                        </label>
+                    </div>
+                    <div class="input">
+                        <label for="subject"><b>Subject:</b>
+                            <input type="text" name="subject" id="subject" class="subject" required
+                                placeholder="Subject">
+                        </label>
+                    </div>
+
+                    <div class="input">
+                        <label for="message"><b>Message:</b>
+                            <textarea class="message" id="message" name="message" rows=10 cols="40"
+                                placeholder="Message" maxlength="150"></textarea>
+
+                        </label>
+                    </div>
+                    <button class="btn" id="butn" type="submit">
+                        <p id="btntext">Submit</p>
+                        <div class="check-box">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                            </svg>
+
+                        </div>
+                    </button>
+                </form>
+            </div>
+
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        let myNav = document.getElementById("myNav");
+        let menuOpen = false;
+        let body = document.querySelector("body");
+        var btntext = document.getElementById("btntext");
+        const welcome = new Audio('images/welcome.mp3');
+
+
+
+        function openNav() {
+            myNav.style.height = "90%";
+        }
+
+        function closeNav() {
+            myNav.style.height = "0%";
+
+        }
+        menuBtn.addEventListener('click', () => {
+            if (!menuOpen) {
+                menuBtn.classList.add('open');
+                menuOpen = true;
+
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+
+
+            }
+
+            if (menuOpen == true) {
+                openNav();
+            }
+            else {
+                closeNav();
+            }
+
+        });
+
+
+    </script>
+
+    <script>
+        var btntext = document.getElementById("btntext");
+        var butn = document.getElementById("butn");
+
+        butn.onclick = function () {
+            console.log("Clicked!!")
+
+            btntext.innerHTML = "Thanks";
+            butn.classList.add("active");
+            btntext.style.color = " black";
+            setTimeout(function () {
+                console.log('I will run after 0.1 seconds');
+                butn.disabled = true;
+            }, 100);
+            
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- <script src="contact.js"></script> -->
+<!-- <script>
+    var butn = document.getElementById("butn");
+    let naame = document.getElementById("naame").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+    let cform = document.getElementById("contact-form");
+    console.log(naame);
+    console.log(email);
+    console.log(message);
+    butn.addEventListener("submit", submitform() );
+    function submitform(e){
+        sendEmail(naame,email,subject,message);
+    }
+    function sendEmail(naame,email,subject,message)
+        {
+            Email.send({
+                Host:"smtp.gmail.com",
+                Username:"venkatasaivishwanath123@gmail.com",
+                Password:"v1118912",
+                To:"vishwanathvenkatasai08@gmail.com",
+                From:"venkatasaivishwanath123@gmail.com",
+                Subject:`${naame} sent u a message`,
+                Body:`Name : ${naame}<br>Email : ${email} <br> Subject : ${subject}<br> Message : ${message}`
+                
+            }).then((message)=> alert("your message is sent successfully"));
+        }
+    // butn.addEventListener("submit", submitform() );
+    // function submitform(){
+    //     var transporter = nodemailer.createTransport({
+    //         host: 'smtp.gmail.com',
+    //         port: 465,
+    //         secure: true,
+    //         service: 'gmail',
+    //         auth: {
+    //             user: 'venkatasaivishwanath123@gmail.com',
+    //             pass: 'v1118912'
+    //         }
+    //     });
+
+    //     var mailOptions = {
+    //     from: 'venkatasaivishwanath123@gmail.com',
+    //     to: 'vishwanathvenkatasai08@gmail.com',
+    //     subject: 'Sending Email using Node.js',
+    //     text: `Name : ${naame}<br>Email : ${email} <br> Subject : ${subject}<br> Message : ${message}`
+    //     };
+    //     transporter.sendMail(mailOptions, function(error, info){
+    //         if (error) {
+    //             console.log(error);
+    //         } else {
+    //             console.log('Email sent: ' + info.response);
+    //         }
+    //     });
+
+    // }
+</script> -->
+
+
+
+<!-- <script  src="https://smtpjs.com/v3/smtp.js"> -->
+<!-- <script>
+    var butn= document.getElementById("butn");
+    let naame = document.getElementById("naame").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+    let cform = document.getElementById("contact-form").value;
+    console.log(naame);
+    console.log(email);
+    console.log(message);
+    // console.log(cform);
+    // butn.addEventListener("submit", submitform() );
+    // function submitform(e){
+    //     sendEmail(naame,email,subject,message);
+    // }
+
+
+    // function sendEmail(naame,email,subject,message)
+    //     {
+    //         Email.send({
+    //             Host:"smtp.gmail.com",
+    //             Username:"venkatasaivishwanath123@gmail.com",
+    //             Password:"v1118912",
+    //             To:"vishwanathvenkatasai08@gmail.com",
+    //             From:"venkatasaivishwanath123@gmail.com",
+    //             Subject:`${naame} sent u a message`,
+    //             Body:`Name : ${naame}<br>Email : ${email} <br> Subject : ${subject}<br> Message : ${message}`
+                
+    //         }).then((message)=> alert("your message is sent successfully"));
+    //     }
+       
+ </script> -->
